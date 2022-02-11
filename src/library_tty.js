@@ -127,7 +127,7 @@ mergeInto(LibraryManager.library, {
             }
           } else
 #endif
-          if (typeof window != 'undefined' &&
+          if (typeof window !== 'undefined' &&
             typeof window.prompt == 'function') {
             // Browser.
             result = window.prompt('Input: ');  // returns null on cancel

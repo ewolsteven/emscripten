@@ -2176,14 +2176,14 @@ var LibraryHTML5 = {
       {{{ makeSetValue('eventStruct+i*8', C_STRUCTS.EmscriptenGamepadEvent.axis, 'e.axes[i]', 'double') }}};
     }
     for (var i = 0; i < e.buttons.length; ++i) {
-      if (typeof(e.buttons[i]) === 'object') {
+      if (typeof e.buttons[i] === 'object') {
         {{{ makeSetValue('eventStruct+i*8', C_STRUCTS.EmscriptenGamepadEvent.analogButton, 'e.buttons[i].value', 'double') }}};
       } else {
         {{{ makeSetValue('eventStruct+i*8', C_STRUCTS.EmscriptenGamepadEvent.analogButton, 'e.buttons[i]', 'double') }}};
       }
     }
     for (var i = 0; i < e.buttons.length; ++i) {
-      if (typeof(e.buttons[i]) === 'object') {
+      if (typeof e.buttons[i] === 'object') {
         {{{ makeSetValue('eventStruct+i*4', C_STRUCTS.EmscriptenGamepadEvent.digitalButton, 'e.buttons[i].pressed', 'i32') }}};
       } else {
         // Assigning a boolean to HEAP32, that's ok, but Closure would like to warn about it:

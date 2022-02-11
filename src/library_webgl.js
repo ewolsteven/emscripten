@@ -1282,7 +1282,7 @@ var LibraryGL = {
 
     if (ret === undefined) {
       var result = GLctx.getParameter(name_);
-      switch (typeof(result)) {
+      switch (typeof result) {
         case "number":
           ret = result;
           break;

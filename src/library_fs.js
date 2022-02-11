@@ -481,7 +481,7 @@ FS.staticInit();` +
       return mounts;
     },
     syncfs: (populate, callback) => {
-      if (typeof(populate) === 'function') {
+      if (typeof populate === 'function') {
         callback = populate;
         populate = false;
       }
@@ -668,7 +668,7 @@ FS.staticInit();` +
       }
     },
     mkdev: (path, mode, dev) => {
-      if (typeof(dev) === 'undefined') {
+      if (typeof dev === 'undefined') {
         dev = mode;
         mode = 438 /* 0666 */;
       }
@@ -1733,10 +1733,10 @@ FS.staticInit();` +
           var start = chunkNum * chunkSize;
           var end = (chunkNum+1) * chunkSize - 1; // including this byte
           end = Math.min(end, datalength-1); // if datalength-1 is selected, this is the last block
-          if (typeof(lazyArray.chunks[chunkNum]) === "undefined") {
+          if (typeof lazyArray.chunks[chunkNum] === 'undefined') {
             lazyArray.chunks[chunkNum] = doXHR(start, end);
           }
-          if (typeof(lazyArray.chunks[chunkNum]) === "undefined") throw new Error("doXHR failed!");
+          if (typeof lazyArray.chunks[chunkNum] === 'undefined') throw new Error('doXHR failed!');
           return lazyArray.chunks[chunkNum];
         });
 

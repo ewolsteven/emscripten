@@ -368,7 +368,7 @@ var emscriptenMemoryProfiler = {
   },
 
   countOpenALAudioDataSize: function countOpenALAudioDataSize() {
-    if (typeof AL == "undefined" || !AL.currentContext) return 0;
+    if (typeof AL === 'undefined' || !AL.currentContext) return 0;
 
     var totalMemory = 0;
 

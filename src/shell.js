@@ -267,7 +267,7 @@ if (ENVIRONMENT_IS_SHELL) {
 #endif
 #endif
 
-  if (typeof read != 'undefined') {
+  if (typeof read !== 'undefined') {
     read_ = function shell_read(f) {
 #if SUPPORT_BASE64_EMBEDDING
       const data = tryParseAsDataURI(f);
@@ -299,9 +299,9 @@ if (ENVIRONMENT_IS_SHELL) {
     setTimeout(() => onload(readBinary(f)), 0);
   };
 
-  if (typeof scriptArgs != 'undefined') {
+  if (typeof scriptArgs !== 'undefined') {
     arguments_ = scriptArgs;
-  } else if (typeof arguments != 'undefined') {
+  } else if (typeof arguments !== 'undefined') {
     arguments_ = arguments;
   }
 
